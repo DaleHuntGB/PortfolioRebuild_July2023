@@ -1,0 +1,186 @@
+:root {
+    --clr-PrimaryBG: hsl(0, 0%, 15%);
+    --clr-SecondaryBG: hsl(0, 0%, 20%);
+    --clr-TertiaryBG: hsl(0, 0%, 25%);
+
+    --clr-BtnHover: hsl(200, 100%, 25%);
+    --clr-PrimaryAccent: hsl(200, 100%, 30%);
+    --clr-SecondaryAccent: hsl(200, 100%, 50%);
+    --clr-TertiaryAccent: hsl(200, 100%, 70%);
+
+    --clr-TextColor: hsl(250, 5%, 100%);
+}
+
+*
+{
+    font-family: 'Poppins', sans-serif;
+    padding: 0em;
+    margin: 0em;
+    font-size: 1em;
+}
+
+*::-webkit-scrollbar {
+    display: none;
+}
+
+* {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+html, body 
+{
+    line-height: 1.5em;
+    scroll-behavior: smooth;
+}
+
+p 
+{
+    width: 75ch;
+    font-weight: 400;
+    color: var(--clr-TextColor);
+}
+
+a, a:visited, a:focus
+{
+    text-decoration: none;
+    color: var(--clr-TextColor);
+}
+
+.NavigationBarContainer   
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--clr-PrimaryBG);
+    border-bottom: 3px solid var(--clr-SecondaryAccent);
+    height: 5vh;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+}
+
+.NavigationBarContainer_Portfolio
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--clr-PrimaryBG);
+    border-bottom: 3px solid var(--clr-SecondaryAccent);
+    height: 5vh;
+}
+
+.NavigationBar_Logo
+{
+    padding: 0em 1em;
+}
+.NavigationBar_MenuItem
+{
+    color: var(--clr-TextColor);
+    transition: color 0.5s ease-in-out;
+    padding: 0em 1em;
+}
+
+.NavigationBar_MenuItem:hover
+{
+    color: var(--clr-PrimaryAccent);
+    transition: color 0.5s ease-in-out;
+}
+
+.HomeContainer
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: var(--clr-SecondaryBG);
+}
+
+.Home_Content
+{
+    padding: 1em 0em;
+    font-size: 2em;
+    font-weight: 600;
+    color: var(--clr-TextColor)
+}
+
+.AboutMeContainer
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: var(--clr-SecondaryBG);
+}
+
+.AboutMe_Content
+{
+    text-align: center;
+}
+
+.AboutMe_Content > p 
+{
+    padding: 0.5em 0em;
+}
+
+.PortfolioContainer
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: top;
+    align-items: center;
+    padding: 1em 0em;
+    height: 100vh;
+    background-color: var(--clr-SecondaryBG);
+}
+
+.PortfolioContainer > div 
+{
+    margin-top: 1em;
+}
+
+.PortfolioContainer > div > p
+{
+    width: 90vw;
+}
+
+.MinimapStats_AddOnDev, .WeakAuras_Dev, .University_Assignments, .UI_Dev
+{
+    background-color: var(--clr-TertiaryBG);
+    border: 1px solid var(--clr-PrimaryAccent);
+    padding: 1em;
+    width: 90vw;
+}
+
+.MinimapStats_AddOnDev_Heading, .WeakAuras_Dev_Heading, .University_Assignments_Heading, .UI_Dev_Heading
+{
+    color: var(--clr-TextColor);
+    font-weight: 600;
+    text-align: center;
+    background-color: var(--clr-SecondaryBG);
+    padding: 0.5em 0em;
+    margin: 0em 0em 1em 0em;
+    border-radius: 3px;
+}
+
+.PersonalProjects
+{
+    color: var(--clr-TextColor);
+    font-weight: 600;
+    text-align: center;
+    background-color: var(--clr-PrimaryBG);
+    transition: background-color 0.5s ease-in-out;
+    padding: 1em;
+    margin: 1em;
+    border: 1px solid var(--clr-PrimaryAccent);
+}
+
+.PersonalProjects:hover
+{
+    background-color: var(--clr-TertiaryBG);
+    transition: background-color 0.5s ease-in-out;
+    cursor: pointer;
+}
