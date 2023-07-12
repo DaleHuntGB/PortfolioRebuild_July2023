@@ -126,6 +126,37 @@ a, a:visited, a:focus
     padding: 0.5em 0em;
 }
 
+.SocialBarContainer  
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--clr-PrimaryBG);
+    border-top: 3px solid var(--clr-SecondaryAccent);
+    height: 5vh;
+    position: fixed;
+    bottom: 0;
+    width: 100vw;
+}
+
+.SocialBar_AuthorYear
+{
+    padding: 0em 1em;
+}
+.SocialBar_Socials_Link
+{
+    color: var(--clr-TextColor);
+    transition: color 0.5s ease-in-out;
+    padding: 0em 1em;
+}
+
+.SocialBar_Socials_Link:hover
+{
+    color: var(--clr-PrimaryAccent);
+    transition: color 0.5s ease-in-out;
+}
+
 .PortfolioContainer
 {
     display: flex;
