@@ -9,6 +9,8 @@
     --clr-TertiaryAccent: hsl(200, 100%, 70%);
 
     --clr-TextColor: hsl(250, 5%, 100%);
+    --txt-NavBarBG: url("/Media/Images/07_BG_Texture.png");
+    --txt-BG: url("/Media/Images/02_BG_Texture.png");
 }
 
 *
@@ -58,6 +60,7 @@ a, a:visited, a:focus
     height: fit-content;
     position: fixed;
     width: 100vw;
+    background-image: var(--txt-NavBarBG);
 }
 
 .NavigationBarContainer_Portfolio
@@ -69,6 +72,7 @@ a, a:visited, a:focus
     background-color: var(--clr-PrimaryBG);
     border-bottom: 3px solid var(--clr-SecondaryAccent);
     height: fit-content;
+    background-image: var(--txt-NavBarBG);
 }
 
 .NavigationBar_Logo
@@ -97,6 +101,19 @@ a, a:visited, a:focus
     color: var(--clr-TextColor);
 }
 
+.SocialBar_TurnOffBG
+{
+    color: var(--clr-TextColor);
+    transition: color 0.5s ease-in-out;
+    cursor: pointer;
+}
+
+.SocialBar_TurnOffBG:hover
+{
+    color: var(--clr-PrimaryAccent);
+    transition: color 0.5s ease-in-out; 
+}
+
 .HomeContainer
 {
     display: flex;
@@ -105,6 +122,7 @@ a, a:visited, a:focus
     align-items: center;
     height: 100vh;
     background-color: var(--clr-SecondaryBG);
+    background-image: var(--txt-BG);
 }
 
 .Home_Content
@@ -122,6 +140,7 @@ a, a:visited, a:focus
     align-items: center;
     height: 100vh;
     background-color: var(--clr-SecondaryBG);
+    background-image: var(--txt-BG);
 }
 
 .AboutMe_Content
@@ -146,6 +165,7 @@ a, a:visited, a:focus
     position: fixed;
     bottom: 0;
     width: 100vw;
+    background-image: var(--txt-NavBarBG);
 }
 
 .SocialBar_AuthorYear
@@ -174,6 +194,7 @@ a, a:visited, a:focus
     padding: 1em 0em;
     height: 100vh;
     background-color: var(--clr-SecondaryBG);
+    background-image: var(--txt-BG);
 }
 
 .PortfolioContainer > div 
