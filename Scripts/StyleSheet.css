@@ -55,9 +55,8 @@ a, a:visited, a:focus
     align-items: center;
     background-color: var(--clr-PrimaryBG);
     border-bottom: 3px solid var(--clr-SecondaryAccent);
-    height: 5vh;
+    height: fit-content;
     position: fixed;
-    top: 0;
     width: 100vw;
 }
 
@@ -69,13 +68,17 @@ a, a:visited, a:focus
     align-items: center;
     background-color: var(--clr-PrimaryBG);
     border-bottom: 3px solid var(--clr-SecondaryAccent);
-    height: 5vh;
+    height: fit-content;
 }
 
 .NavigationBar_Logo
 {
-    padding: 0em 1em;
+    padding: 0.3em 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
 .NavigationBar_MenuItem
 {
     color: var(--clr-TextColor);
@@ -87,6 +90,11 @@ a, a:visited, a:focus
 {
     color: var(--clr-PrimaryAccent);
     transition: color 0.5s ease-in-out;
+}
+
+.SocialBar_AuthorYear
+{
+    color: var(--clr-TextColor);
 }
 
 .HomeContainer
