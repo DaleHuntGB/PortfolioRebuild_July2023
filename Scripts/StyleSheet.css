@@ -108,7 +108,30 @@ a, a:visited, a:focus
     cursor: pointer;
 }
 
+.SocialBar_TurnOnBG
+{
+    color: var(--clr-TextColor);
+    transition: color 0.5s ease-in-out;
+    cursor: pointer;
+}
+
+#Hide
+{
+    display: none;
+}
+
+#Show
+{
+    display: flex;
+}
+
 .SocialBar_TurnOffBG:hover
+{
+    color: var(--clr-PrimaryAccent);
+    transition: color 0.5s ease-in-out; 
+}
+
+.SocialBar_TurnOnBG:hover
 {
     color: var(--clr-PrimaryAccent);
     transition: color 0.5s ease-in-out; 
