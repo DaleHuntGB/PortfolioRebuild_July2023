@@ -9,6 +9,7 @@
     --clr-TertiaryAccent: hsl(200, 100%, 70%);
 
     --clr-TextColor: hsl(250, 5%, 100%);
+    --clr-ListColor: hsl(250, 5%, 90%);
     --txt-NavBarBG: url("/Media/Images/07_BG_Texture.png");
     --txt-BG: url("/Media/Images/02_BG_Texture.png");
 }
@@ -41,6 +42,21 @@ p
     width: 75ch;
     font-weight: 400;
     color: var(--clr-TextColor);
+}
+
+ul 
+{
+    text-decoration: none;
+    padding: 0.5em 0em;
+    color: var(--clr-TertiaryAccent);
+}
+
+li 
+{
+    text-decoration: none;
+    list-style-type: none;
+    color: var(--clr-ListColor);
+    padding: 0em 0.5em;
 }
 
 a, a:visited, a:focus
@@ -247,6 +263,25 @@ a, a:visited, a:focus
     padding: 0.5em 0em;
     margin: 0em 0em 1em 0em;
     border-radius: 3px;
+}
+
+.MinimapStats_AddOnDev_CenterText
+{
+    text-align: center;
+    padding: 1em 0em 0em 0em;
+}
+
+.MinimapStats_AddOnDev_CurseForgeLink
+{
+    text-align: center;
+    color: var(--clr-TextColor);
+    transition: color 0.5s ease-in-out;
+}
+
+.MinimapStats_AddOnDev_CurseForgeLink:hover
+{
+    color: var(--clr-TertiaryAccent);
+    transition: color 0.5s ease-in-out;
 }
 
 .PersonalProjects
