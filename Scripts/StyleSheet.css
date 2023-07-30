@@ -200,7 +200,7 @@ a, a:visited, a:focus
     align-items: center;
     background-color: var(--clr-PrimaryBG);
     border-top: 3px solid var(--clr-SecondaryAccent);
-    height: 5vh;
+    height: 3vh;
     position: fixed;
     bottom: 0;
     width: 100vw;
@@ -276,6 +276,7 @@ a, a:visited, a:focus
     text-align: center;
     color: var(--clr-TextColor);
     transition: color 0.5s ease-in-out;
+    font-weight: 600;
 }
 
 .MinimapStats_AddOnDev_CurseForgeLink:hover
@@ -301,4 +302,31 @@ a, a:visited, a:focus
     background-color: var(--clr-TertiaryBG);
     transition: background-color 0.5s ease-in-out;
     cursor: pointer;
+}
+
+.WeakAuras_Heading
+{
+    font-size: 1.15em;
+    font-weight: 600;
+    color: var(--clr-SecondaryAccent);
+}
+
+.WeakAuras_Dev > ul > li > a
+{
+    text-align: center;
+    color: var(--clr-TextColor);
+    transition: color 0.5s ease-in-out;
+    font-weight: 600;
+}
+
+.WeakAuras_Dev > ul > li > a:hover
+{
+    color: var(--clr-TertiaryAccent);
+    transition: color 0.5s ease-in-out;
+}
+
+.WeakAuras_Dev_Desc
+{
+    font-size: 0.9em;
+    font-weight: 300;
 }
