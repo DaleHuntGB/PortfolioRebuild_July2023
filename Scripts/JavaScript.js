@@ -35,6 +35,10 @@ var AboutMeContainer = document.querySelector(".AboutMeContainer")
 var PortfolioContainer = document.querySelector(".PortfolioContainer")
 var SocialBarContainer = document.querySelector(".SocialBarContainer")
 
+var BackgroundOffURL = "url('/Media/Images/00_BG_Texture.png')"
+var TopBotBarBackgroundURL = "url('/Media/Images/07_BG_Texture.png')"
+var ContentBackgroundURL = "url('/Media/Images/02_BG_Texture.png')"
+
 var BGActive = true;
 
 function ToggleBackground()
@@ -43,16 +47,16 @@ function ToggleBackground()
     {
         if (document.title == "Dale Hunt")
         {
-            HomeContainer.style.backgroundImage = "url('/Media/Images/00_BG_Texture.png')";
-            AboutMeContainer.style.backgroundImage = "url('/Media/Images/00_BG_Texture.png')";
-            NavigationBarContainer.style.backgroundImage = "url('/Media/Images/00_BG_Texture.png')";
-            SocialBarContainer.style.backgroundImage = "url('/Media/Images/00_BG_Texture.png')";
+            HomeContainer.style.backgroundImage = BackgroundOffURL;
+            AboutMeContainer.style.backgroundImage = BackgroundOffURL;
+            NavigationBarContainer.style.backgroundImage = BackgroundOffURL;
+            SocialBarContainer.style.backgroundImage = BackgroundOffURL;
         }
         else if (document.title == "Portfolio" || document.title == "Personal Projects")
         {
-            NavigationBarContainer_Portfolio.style.backgroundImage = "url('/Media/Images/00_BG_Texture.png')";
-            PortfolioContainer.style.backgroundImage = "url('/Media/Images/00_BG_Texture.png')";
-            SocialBarContainer.style.backgroundImage = "url('/Media/Images/00_BG_Texture.png')";
+            NavigationBarContainer_Portfolio.style.backgroundImage = BackgroundOffURL;
+            PortfolioContainer.style.backgroundImage = BackgroundOffURL;
+            SocialBarContainer.style.backgroundImage = BackgroundOffURL;
         }
         BGActive = false;
         ToggleBackgroundButtonOff.setAttribute("id", "Hide")
@@ -62,16 +66,16 @@ function ToggleBackground()
     {
         if (document.title == "Dale Hunt")
         {
-            HomeContainer.style.backgroundImage = "url('/Media/Images/02_BG_Texture.png')";
-            AboutMeContainer.style.backgroundImage = "url('/Media/Images/02_BG_Texture.png')";
-            NavigationBarContainer.style.backgroundImage = "url('/Media/Images/07_BG_Texture.png')";
-            SocialBarContainer.style.backgroundImage = "url('/Media/Images/07_BG_Texture.png')";          
+            HomeContainer.style.backgroundImage = ContentBackgroundURL;
+            AboutMeContainer.style.backgroundImage = ContentBackgroundURL;
+            NavigationBarContainer.style.backgroundImage = TopBotBarBackgroundURL;
+            SocialBarContainer.style.backgroundImage = TopBotBarBackgroundURL;          
         }
         else if (document.title == "Portfolio" || document.title == "Personal Projects")
         {
-            NavigationBarContainer_Portfolio.style.backgroundImage = "url('/Media/Images/07_BG_Texture.png')";
-            PortfolioContainer.style.backgroundImage = "url('/Media/Images/02_BG_Texture.png')";
-            SocialBarContainer.style.backgroundImage = "url('/Media/Images/07_BG_Texture.png')";
+            PortfolioContainer.style.backgroundImage = ContentBackgroundURL;
+            NavigationBarContainer_Portfolio.style.backgroundImage = TopBotBarBackgroundURL;
+            SocialBarContainer.style.backgroundImage = TopBotBarBackgroundURL;
         }
         BGActive = true;
         ToggleBackgroundButtonOff.removeAttribute("id", "Hide")
