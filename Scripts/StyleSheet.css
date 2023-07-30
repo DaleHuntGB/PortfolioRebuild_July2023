@@ -10,8 +10,8 @@
 
     --clr-TextColor: hsl(250, 5%, 100%);
     --clr-ListColor: hsl(250, 5%, 90%);
-    --txt-NavBarBG: url("/Media/Images/03_BG_Texture.png");
-    --txt-BG: url("/Media/Images/00_BG_Texture.png");
+    --txt-NavBarBG: url("/Media/Images/07_BG_Texture.png");
+    --txt-BG: url("/Media/Images/02_BG_Texture.png");
 }
 
 *
@@ -72,7 +72,7 @@ a, a:visited, a:focus
     justify-content: space-between;
     align-items: center;
     background-color: var(--clr-PrimaryBG);
-    border-bottom: 3px solid var(--clr-SecondaryAccent);
+    border-bottom: 3px solid var(--clr-PrimaryAccent);
     height: fit-content;
     position: fixed;
     width: 100vw;
@@ -86,7 +86,7 @@ a, a:visited, a:focus
     justify-content: space-between;
     align-items: center;
     background-color: var(--clr-PrimaryBG);
-    border-bottom: 3px solid var(--clr-SecondaryAccent);
+    border-bottom: 3px solid var(--clr-PrimaryAccent);
     height: fit-content;
     background-image: var(--txt-NavBarBG);
 }
@@ -108,7 +108,7 @@ a, a:visited, a:focus
 
 .NavigationBar_MenuItem:hover
 {
-    color: var(--clr-PrimaryAccent);
+    color: var(--clr-SecondaryAccent);
     transition: color 0.5s ease-in-out;
 }
 
@@ -143,13 +143,13 @@ a, a:visited, a:focus
 
 .SocialBar_TurnOffBG:hover
 {
-    color: var(--clr-PrimaryAccent);
+    color: var(--clr-SecondaryAccent);
     transition: color 0.5s ease-in-out; 
 }
 
 .SocialBar_TurnOnBG:hover
 {
-    color: var(--clr-PrimaryAccent);
+    color: var(--clr-SecondaryAccent);
     transition: color 0.5s ease-in-out; 
 }
 
@@ -199,7 +199,7 @@ a, a:visited, a:focus
     justify-content: space-between;
     align-items: center;
     background-color: var(--clr-PrimaryBG);
-    border-top: 3px solid var(--clr-SecondaryAccent);
+    border-top: 3px solid var(--clr-PrimaryAccent);
     height: 3vh;
     position: fixed;
     bottom: 0;
@@ -220,7 +220,7 @@ a, a:visited, a:focus
 
 .SocialBar_Socials_Link:hover
 {
-    color: var(--clr-PrimaryAccent);
+    color: var(--clr-SecondaryAccent);
     transition: color 0.5s ease-in-out;
 }
 
@@ -281,7 +281,7 @@ a, a:visited, a:focus
 
 .MinimapStats_AddOnDev_CurseForgeLink:hover
 {
-    color: var(--clr-TertiaryAccent);
+    color: var(--clr-SecondaryAccent);
     transition: color 0.5s ease-in-out;
 }
 
@@ -321,7 +321,7 @@ a, a:visited, a:focus
 
 .WeakAuras_Dev > ul > li > a:hover
 {
-    color: var(--clr-TertiaryAccent);
+    color: var(--clr-SecondaryAccent);
     transition: color 0.5s ease-in-out;
 }
 
