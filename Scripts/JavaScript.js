@@ -1,9 +1,9 @@
 // Fetch the relevant image holder.
-var NavigationBar_Logo = document.querySelector(".NavigationBar_Logo > img")
+const NavigationBar_Logo = document.querySelector(".NavigationBar_Logo > img")
 
 // Assign each logo to their own variable for neater code. Change these paths if you want to swap profile pictures.
-const DH_Logo = "/Media/Images/DH_Logo.png";
-const UH_Logo = "/Media/Images/UH_Logo.png";
+var DH_Logo = "/Media/Images/DH_Logo.png";
+var UH_Logo = "/Media/Images/UH_Logo.png";
 
 // Swap To Unhalted Logo
 function NavigationBar_SwapToUHLogo()
@@ -25,15 +25,15 @@ NavigationBar_Logo.addEventListener("mouseout", NavigationBar_SwapToDHLogo)
 
 // Turn Off Background On Click
 
-var ToggleBackgroundButtonOff = document.querySelector(".SocialBar_TurnOffBG")
-var ToggleBackgroundButtonOn = document.querySelector(".SocialBar_TurnOnBG")
+const ToggleBackgroundButtonOff = document.querySelector(".SocialBar_TurnOffBG")
+const ToggleBackgroundButtonOn = document.querySelector(".SocialBar_TurnOnBG")
 
-var NavigationBarContainer = document.querySelector(".NavigationBarContainer")
-var NavigationBarContainer_Portfolio = document.querySelector(".NavigationBarContainer_Portfolio")
-var HomeContainer = document.querySelector(".HomeContainer")
-var AboutMeContainer = document.querySelector(".AboutMeContainer")
-var PortfolioContainer = document.querySelector(".PortfolioContainer")
-var SocialBarContainer = document.querySelector(".SocialBarContainer")
+const NavigationBarContainer = document.querySelector(".NavigationBarContainer")
+const NavigationBarContainer_Portfolio = document.querySelector(".NavigationBarContainer_Portfolio")
+const HomeContainer = document.querySelector(".HomeContainer")
+const AboutMeContainer = document.querySelector(".AboutMeContainer")
+const PortfolioContainer = document.querySelector(".PortfolioContainer")
+const SocialBarContainer = document.querySelector(".SocialBarContainer")
 
 var BackgroundOffURL = "url('/Media/Images/00_BG_Texture.png')"
 var TopBotBarBackgroundURL = "url('/Media/Images/07_BG_Texture.png')"
@@ -43,7 +43,7 @@ var BGActive = true;
 
 function ToggleBackground()
 {
-    if (BGActive)
+    if (BGActive) // Turn BG Off
     {
         if (document.title == "Dale Hunt")
         {
@@ -59,10 +59,10 @@ function ToggleBackground()
             SocialBarContainer.style.backgroundImage = BackgroundOffURL;
         }
         BGActive = false;
-        ToggleBackgroundButtonOff.setAttribute("id", "Hide")
-        ToggleBackgroundButtonOn.removeAttribute("id", "Hide")
+        ToggleBackgroundButtonOff.setAttribute("id", "Hide") // Hide Off Button
+        ToggleBackgroundButtonOn.removeAttribute("id", "Hide") // Show On Button
     }
-    else // Turn BG Back On
+    else // Turn BG On
     {
         if (document.title == "Dale Hunt")
         {
@@ -78,10 +78,9 @@ function ToggleBackground()
             SocialBarContainer.style.backgroundImage = TopBotBarBackgroundURL;
         }
         BGActive = true;
-        ToggleBackgroundButtonOff.removeAttribute("id", "Hide")
-        ToggleBackgroundButtonOn.setAttribute("id", "Hide")
+        ToggleBackgroundButtonOff.removeAttribute("id", "Hide") // Hide On Button
+        ToggleBackgroundButtonOn.setAttribute("id", "Hide") // Show Off Button
     }
-    
 }
 
 ToggleBackgroundButtonOff.addEventListener("click", ToggleBackground)
