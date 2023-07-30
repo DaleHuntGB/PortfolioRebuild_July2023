@@ -62,7 +62,7 @@ function ToggleBackground()
         ToggleBackgroundButtonOff.setAttribute("id", "Hide") // Hide Off Button
         ToggleBackgroundButtonOn.removeAttribute("id", "Hide") // Show On Button
     }
-    else // Turn BG On
+    else
     {
         if (document.title == "Dale Hunt")
         {
