@@ -10,8 +10,8 @@
 
     --clr-TextColor: hsl(250, 5%, 100%);
     --clr-ListColor: hsl(250, 5%, 90%);
-    --txt-NavBarBG: url("/Media/Images/07_BG_Texture.png");
-    --txt-BG: url("/Media/Images/02_BG_Texture.png");
+    --txt-NavBarBG: url("/Media/Images/03_BG_Texture.png");
+    --txt-BG: url("/Media/Images/00_BG_Texture.png");
 }
 
 *

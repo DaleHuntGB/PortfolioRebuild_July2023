@@ -62,16 +62,16 @@ function ToggleBackground()
     {
         if (document.title == "Dale Hunt")
         {
-            HomeContainer.style.backgroundImage = "url('/Media/Images/02_BG_Texture.png')";
-            AboutMeContainer.style.backgroundImage = "url('/Media/Images/02_BG_Texture.png')";
-            NavigationBarContainer.style.backgroundImage = "url('/Media/Images/07_BG_Texture.png')";
-            SocialBarContainer.style.backgroundImage = "url('/Media/Images/07_BG_Texture.png')";          
+            HomeContainer.style.backgroundImage = "url('/Media/Images/00_BG_Texture.png')";
+            AboutMeContainer.style.backgroundImage = "url('/Media/Images/00_BG_Texture.png')";
+            NavigationBarContainer.style.backgroundImage = "url('/Media/Images/03_BG_Texture.png')";
+            SocialBarContainer.style.backgroundImage = "url('/Media/Images/03_BG_Texture.png')";          
         }
         else if (document.title == "Portfolio" || document.title == "Personal Projects")
         {
-            NavigationBarContainer_Portfolio.style.backgroundImage = "url('/Media/Images/07_BG_Texture.png')";
-            PortfolioContainer.style.backgroundImage = "url('/Media/Images/02_BG_Texture.png')";
-            SocialBarContainer.style.backgroundImage = "url('/Media/Images/07_BG_Texture.png')";
+            NavigationBarContainer_Portfolio.style.backgroundImage = "url('/Media/Images/00_BG_Texture.png')";
+            PortfolioContainer.style.backgroundImage = "url('/Media/Images/00_BG_Texture.png')";
+            SocialBarContainer.style.backgroundImage = "url('/Media/Images/03_BG_Texture.png')";
         }
         BGActive = true;
         ToggleBackgroundButtonOff.removeAttribute("id", "Hide")
