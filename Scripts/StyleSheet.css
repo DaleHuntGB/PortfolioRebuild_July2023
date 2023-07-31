@@ -87,6 +87,8 @@ a, a:visited, a:focus
     align-items: center;
     background-color: var(--clr-PrimaryBG);
     border-bottom: 3px solid var(--clr-PrimaryAccent);
+    position: fixed;
+    width: 100vw;
     height: fit-content;
     background-image: var(--txt-NavBarBG);
 }
@@ -230,18 +232,30 @@ a, a:visited, a:focus
     flex-direction: column;
     justify-content: top;
     align-items: center;
-    padding: 1em 0em;
     height: 100vh;
+    padding: 5em 0em;
     background-color: var(--clr-SecondaryBG);
     background-image: var(--txt-BG);
 }
 
-.PortfolioContainer > div 
+.PersonalProjects_PortfolioContainer
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: top;
+    align-items: center;
+    padding: 5em 0em;
+    background-color: var(--clr-SecondaryBG);
+    background-image: var(--txt-BG);
+    background-attachment: fixed;
+}
+
+.PortfolioContainer > div, .PersonalProjects_PortfolioContainer > div
 {
     margin-top: 1em;
 }
 
-.PortfolioContainer > div > p
+.PortfolioContainer > div > p, .PersonalProjects_PortfolioContainer > div > p
 {
     width: 90vw;
 }
