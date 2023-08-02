@@ -12,6 +12,9 @@
     --clr-ListColor: hsl(250, 5%, 90%);
     --txt-NavBarBG: url("/Media/Images/07_BG_Texture.png");
     --txt-BG: url("/Media/Images/02_BG_Texture.png");
+
+    --img-PortfolioSizeW: 320px;
+    --img-PortfolioSizeH: 250px;
 }
 
 *
@@ -279,7 +282,7 @@ a, a:visited, a:focus
     border-radius: 3px;
 }
 
-.MinimapStats_AddOnDev_CenterText
+.Portfolio_CenterText
 {
     text-align: center;
     padding: 1em 0em 0em 0em;
@@ -343,4 +346,88 @@ a, a:visited, a:focus
 {
     font-size: 0.9em;
     font-weight: 300;
+}
+
+.University_Assignments_Year_One
+{
+    color: var(--clr-TextColor);
+    font-weight: 600;
+    text-align: center;
+    background-color: var(--clr-SecondaryBG);
+    padding: 0.5em 0em;
+    margin: 1em 0em 1em 0em;
+    border-radius: 3px;
+}
+
+.University_Assignments_Year_Two
+{
+    color: var(--clr-TextColor);
+    font-weight: 600;
+    text-align: center;
+    background-color: var(--clr-SecondaryBG);
+    padding: 0.5em 0em;
+    margin: 1em 0em 1em 0em;
+    border-radius: 3px;
+}
+
+.University_Assignments_Year_One_AerialSpace,
+.University_Assignments_Year_One_Prison_Run
+{
+    font-weight: 600;
+    color: var(--clr-TertiaryAccent);
+}
+
+.University_Assignments_Year_One_AerialSpace_Link
+{
+    text-align: center;
+    color: var(--clr-TextColor);
+    transition: color 0.5s ease-in-out;
+    font-weight: 600;
+}
+
+.University_Assignments_Year_One_AerialSpace_Link:hover
+{
+    color: var(--clr-SecondaryAccent);
+    transition: color 0.5s ease-in-out;
+}
+
+.University_Assignments_Year_One_AerialSpace_Container
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.University_Assignments_Year_One_AerialSpace_Container > p
+{
+    width: fit-content;
+}
+
+.University_Assignments_Year_One_AerialSpace_Slideshow
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.University_Assignments_Year_One_AerialSpace_Slideshow > img 
+{
+    width: inherit;
+    border: 1px solid var(--clr-TertiaryAccent);
+    width: var(--img-PortfolioSizeW);
+    height: var(--img-PortfolioSizeH);
+    margin: 0.5em;
+}
+
+@media screen and (max-width: 1500px) {
+    .University_Assignments_Year_One_AerialSpace_Slideshow
+    {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        margin: auto;
+    }
 }
