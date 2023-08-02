@@ -12,9 +12,6 @@
     --clr-ListColor: hsl(250, 5%, 90%);
     --txt-NavBarBG: url("/Media/Images/07_BG_Texture.png");
     --txt-BG: url("/Media/Images/02_BG_Texture.png");
-
-    --img-PortfolioSizeW: 320px;
-    --img-PortfolioSizeH: 250px;
 }
 
 *
@@ -416,17 +413,13 @@ a, a:visited, a:focus
 {
     width: inherit;
     border: 1px solid var(--clr-TertiaryAccent);
-    width: var(--img-PortfolioSizeW);
-    height: var(--img-PortfolioSizeH);
+    width: 100%;
     margin: 0.5em;
 }
 
 @media screen and (max-width: 1500px) {
-    .University_Assignments_Year_One_AerialSpace_Slideshow
+    .University_Assignments_Year_One_AerialSpace_Slideshow, .University_Assignments_Year_One_Prison_Run_Slideshow
     {
-        display: flex;
-        justify-content: center;
-        align-items: center;
         flex-wrap: wrap;
         margin: auto;
     }
