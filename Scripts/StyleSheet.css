@@ -368,7 +368,9 @@ a, a:visited, a:focus
 }
 
 .University_Assignments_Year_One_AerialSpace,
-.University_Assignments_Year_One_Prison_Run
+.University_Assignments_Year_One_Prison_Run,
+.University_Assignments_Year_Two_Elite_Parkour,
+.University_Assignments_Year_Two_Game_Engine_Development
 {
     font-weight: 600;
     color: var(--clr-TertiaryAccent);
@@ -389,16 +391,28 @@ a, a:visited, a:focus
 }
 
 .University_Assignments_Year_One_AerialSpace_Container, .University_Assignments_Year_One_Prison_Run_Container
+
+{
+    display: flex;
+    justify-content: center;
+    align-items: left;
+    flex-direction: column;
+}
+
+.University_Assignments_Year_Two_Elite_Parkour_Container, .University_Assignments_Year_Two_Game_Engine_Development_Container
 {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
+    flex-direction: row;
 }
 
-.University_Assignments_Year_One_AerialSpace_Container > p, .University_Assignments_Year_One_Prison_Run_Container > p
+
+.University_Assignments_Year_One_AerialSpace_Container > p, .University_Assignments_Year_One_Prison_Run_Container > p,
+.University_Assignments_Year_Two_Game_Engine_Development_Container > p
 {
     width: fit-content;
+    padding: 0.5em;
 }
 
 .University_Assignments_Year_One_AerialSpace_Slideshow, .University_Assignments_Year_One_Prison_Run_Slideshow
@@ -407,6 +421,13 @@ a, a:visited, a:focus
     justify-content: center;
     align-items: center;
     flex-direction: row;
+}
+
+.University_Assignments_Year_Two_Elite_Parkour_GameDemo, .University_Assignments_Year_Two_Game_Engine_Development_Demo
+{
+    border: 1px solid var(--clr-TertiaryAccent);
+    background-color: black;
+    margin: 0.5em;
 }
 
 .University_Assignments_Year_One_AerialSpace_Slideshow > img, .University_Assignments_Year_One_Prison_Run_Slideshow > img
