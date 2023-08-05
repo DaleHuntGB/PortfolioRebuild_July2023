@@ -33,6 +33,7 @@ const NavigationBarContainer_Portfolio = document.querySelector(".NavigationBarC
 const HomeContainer = document.querySelector(".HomeContainer")
 const AboutMeContainer = document.querySelector(".AboutMeContainer")
 const PortfolioContainer = document.querySelector(".PortfolioContainer")
+const PersonalProjectsContainer = document.querySelector(".PersonalProjects_PortfolioContainer")
 const SocialBarContainer = document.querySelector(".SocialBarContainer")
 
 var BackgroundOffURL = "url('/Media/Images/00_BG_Texture.png')"
@@ -52,10 +53,16 @@ function ToggleBackground()
             NavigationBarContainer.style.backgroundImage = BackgroundOffURL;
             SocialBarContainer.style.backgroundImage = BackgroundOffURL;
         }
-        else if (document.title == "Portfolio" || document.title == "Personal Projects")
+        else if (document.title == "Portfolio")
         {
             NavigationBarContainer_Portfolio.style.backgroundImage = BackgroundOffURL;
             PortfolioContainer.style.backgroundImage = BackgroundOffURL;
+            SocialBarContainer.style.backgroundImage = BackgroundOffURL;
+        }
+        else if (document.title == "Personal Projects")
+        {
+            NavigationBarContainer_Portfolio.style.backgroundImage = BackgroundOffURL;
+            PersonalProjectsContainer.style.backgroundImage = BackgroundOffURL;
             SocialBarContainer.style.backgroundImage = BackgroundOffURL;
         }
         BGActive = false;
@@ -71,9 +78,15 @@ function ToggleBackground()
             NavigationBarContainer.style.backgroundImage = TopBotBarBackgroundURL;
             SocialBarContainer.style.backgroundImage = TopBotBarBackgroundURL;          
         }
-        else if (document.title == "Portfolio" || document.title == "Personal Projects")
+        else if (document.title == "Portfolio")
         {
             PortfolioContainer.style.backgroundImage = ContentBackgroundURL;
+            NavigationBarContainer_Portfolio.style.backgroundImage = TopBotBarBackgroundURL;
+            SocialBarContainer.style.backgroundImage = TopBotBarBackgroundURL;
+        }
+        else if (document.title == "Personal Projects")
+        {
+            PersonalProjectsContainer.style.backgroundImage = ContentBackgroundURL;
             NavigationBarContainer_Portfolio.style.backgroundImage = TopBotBarBackgroundURL;
             SocialBarContainer.style.backgroundImage = TopBotBarBackgroundURL;
         }
