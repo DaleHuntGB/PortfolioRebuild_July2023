@@ -113,6 +113,27 @@ const PrisonRun_ImageHeight = 360;
 // Aerial Space Slideshow
 
 let AerialSpace_CurrentIndex = 0;
+let AerialSpaceInterval;
+let isMouseInAerialSpace = false;
+
+function startAerialSpaceSlideshow() {
+  AerialSpaceInterval = setInterval(AerialSpace_ShowNextImage, 3000);
+}
+
+function pauseAerialSpaceSlideshow() {
+  clearInterval(AerialSpaceInterval);
+}
+
+AerialSpaceContainer.addEventListener('mouseenter', () => {
+  isMouseInAerialSpace = true;
+  startAerialSpaceSlideshow();
+});
+
+AerialSpaceContainer.addEventListener('mouseleave', () => {
+  isMouseInAerialSpace = false;
+  pauseAerialSpaceSlideshow();
+});
+
 AerialSpaceContainerImages.forEach((image, index) => {
   if (index !== AerialSpace_CurrentIndex) {
     image.style.display = 'none';
@@ -122,47 +143,53 @@ AerialSpaceContainerImages.forEach((image, index) => {
 });
 
 function AerialSpace_ShowNextImage() {
-  AerialSpaceContainerImages[AerialSpace_CurrentIndex].style.display = 'none';
-  AerialSpace_CurrentIndex = (AerialSpace_CurrentIndex + 1) % AerialSpaceContainerImages.length;
-  AerialSpaceContainerImages[AerialSpace_CurrentIndex].style.display = 'block';
-}
-
-function AerialSpace_ShowPrevImage() {
-  AerialSpaceContainerImages[AerialSpace_CurrentIndex].style.display = 'none';
-  AerialSpace_CurrentIndex = (AerialSpace_CurrentIndex - 1 + AerialSpaceContainerImages.length) % AerialSpaceContainerImages.length;
-  AerialSpaceContainerImages[AerialSpace_CurrentIndex].style.display = 'block';
+  if (isMouseInAerialSpace) {
+    AerialSpaceContainerImages[AerialSpace_CurrentIndex].style.display = 'none';
+    AerialSpace_CurrentIndex = (AerialSpace_CurrentIndex + 1) % AerialSpaceContainerImages.length;
+    AerialSpaceContainerImages[AerialSpace_CurrentIndex].style.display = 'block';
+  }
 }
 
 // Prison Run Slideshow
 let PrisonRun_CurrentIndex = 0;
+let PrisonRunInterval;
+let isMouseInPrisonRun = false;
+
+function startPrisonRunSlideshow() {
+  PrisonRunInterval = setInterval(PrisonRun_ShowNextImage, 3000);
+}
+
+function pausePrisonRunSlideshow() {
+  clearInterval(PrisonRunInterval);
+}
+
+PrisonRunContainer.addEventListener('mouseenter', () => {
+  isMouseInPrisonRun = true;
+  startPrisonRunSlideshow();
+});
+
+PrisonRunContainer.addEventListener('mouseleave', () => {
+  isMouseInPrisonRun = false;
+  pausePrisonRunSlideshow();
+});
+
 PrisonRunContainerImages.forEach((image, index) => {
-    if (index !== PrisonRun_CurrentIndex) {
-      image.style.display = 'none';
-    }
-    image.style.width = `${PrisonRun_ImageWidth}px`; // Set the width
-    image.style.height = `${PrisonRun_ImageHeight}px`; // Set the height
-  });
-  
-  function PrisonRun_ShowNextImage() {
+  if (index !== PrisonRun_CurrentIndex) {
+    image.style.display = 'none';
+  }
+  image.style.width = `${PrisonRun_ImageWidth}px`; // Set the width
+  image.style.height = `${PrisonRun_ImageHeight}px`; // Set the height
+});
+
+function PrisonRun_ShowNextImage() {
+  if (isMouseInPrisonRun) {
     PrisonRunContainerImages[PrisonRun_CurrentIndex].style.display = 'none';
     PrisonRun_CurrentIndex = (PrisonRun_CurrentIndex + 1) % PrisonRunContainerImages.length;
     PrisonRunContainerImages[PrisonRun_CurrentIndex].style.display = 'block';
   }
-  
-  function PrisonRun_ShowPrevImage() {
-    PrisonRunContainerImages[PrisonRun_CurrentIndex].style.display = 'none';
-    PrisonRun_CurrentIndex = (PrisonRun_CurrentIndex - 1 + PrisonRunContainerImages.length) % PrisonRunContainerImages.length;
-    PrisonRunContainerImages[PrisonRun_CurrentIndex].style.display = 'block';
-  }
+}
 
+startAerialSpaceSlideshow();
+startPrisonRunSlideshow();
 
-
-setInterval(AerialSpace_ShowNextImage, 3000);
-setInterval(PrisonRun_ShowNextImage, 3000)
-
-// Add event listeners for next and previous buttons if you have them
-// Example:
-// const nextButton = document.getElementById('nextButton');
-// const prevButton = document.getElementById('prevButton');
-// nextButton.addEventListener('click', showNextImage);
-// prevButton.addEventListener('click', showPrevImage);
+// https://chat.openai.com/share/769cfb2d-2267-4241-8358-d4bedae4db08
