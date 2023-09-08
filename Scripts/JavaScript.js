@@ -98,3 +98,47 @@ function ToggleBackground()
 
 ToggleBackgroundButtonOff.addEventListener("click", ToggleBackground)
 ToggleBackgroundButtonOn.addEventListener("click", ToggleBackground)
+
+// Get references to the container and image elements
+const container = document.querySelector('.University_Assignments_Year_One_AerialSpace_Slideshow');
+const images = document.querySelectorAll('.University_Assignments_Year_One_AerialSpace_Slideshow > img');
+
+// Set a fixed size for all images (adjust these values as needed)
+const imageWidth = 600; // Set your desired width
+const imageHeight = 400; // Set your desired height
+
+// Set initial index and hide all images
+let currentIndex = 0;
+images.forEach((image, index) => {
+  if (index !== currentIndex) {
+    image.style.display = 'none';
+  }
+  image.style.width = `${imageWidth}px`; // Set the width
+  image.style.height = `${imageHeight}px`; // Set the height
+});
+
+// Function to display the next image
+function showNextImage() {
+  images[currentIndex].style.display = 'none';
+  currentIndex = (currentIndex + 1) % images.length;
+  images[currentIndex].style.display = 'block';
+}
+
+// Function to display the previous image
+function showPrevImage() {
+  images[currentIndex].style.display = 'none';
+  currentIndex = (currentIndex - 1 + images.length) % images.length;
+  images[currentIndex].style.display = 'block';
+}
+
+// Add event listeners for next and previous buttons if you have them
+// Example:
+// const nextButton = document.getElementById('nextButton');
+// const prevButton = document.getElementById('prevButton');
+// nextButton.addEventListener('click', showNextImage);
+// prevButton.addEventListener('click', showPrevImage);
+
+// You can also add a setInterval to automatically change images
+// Example:
+setInterval(showNextImage, 1000); // Change image every 5 seconds
+
