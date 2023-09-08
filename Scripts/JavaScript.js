@@ -99,37 +99,66 @@ function ToggleBackground()
 ToggleBackgroundButtonOff.addEventListener("click", ToggleBackground)
 ToggleBackgroundButtonOn.addEventListener("click", ToggleBackground)
 
-// Get references to the container and image elements
-const container = document.querySelector('.University_Assignments_Year_One_AerialSpace_Slideshow');
-const images = document.querySelectorAll('.University_Assignments_Year_One_AerialSpace_Slideshow > img');
+const AerialSpaceContainer = document.querySelector('.University_Assignments_Year_One_AerialSpace_Slideshow');
+const AerialSpaceContainerImages = document.querySelectorAll('.University_Assignments_Year_One_AerialSpace_Slideshow > img');
+const PrisonRunContainer = document.querySelector(".University_Assignments_Year_One_Prison_Run_Slideshow");
+const PrisonRunContainerImages = document.querySelectorAll(".University_Assignments_Year_One_Prison_Run_Slideshow > img");
 
-// Set a fixed size for all images (adjust these values as needed)
-const imageWidth = 600; // Set your desired width
-const imageHeight = 400; // Set your desired height
+const AerialSpace_ImageWidth = 600;
+const AerialSpace_ImageHeight = 400;
 
-// Set initial index and hide all images
-let currentIndex = 0;
-images.forEach((image, index) => {
-  if (index !== currentIndex) {
+const PrisonRun_ImageWidth = 720;
+const PrisonRun_ImageHeight = 360;
+
+// Aerial Space Slideshow
+
+let AerialSpace_CurrentIndex = 0;
+AerialSpaceContainerImages.forEach((image, index) => {
+  if (index !== AerialSpace_CurrentIndex) {
     image.style.display = 'none';
   }
-  image.style.width = `${imageWidth}px`; // Set the width
-  image.style.height = `${imageHeight}px`; // Set the height
+  image.style.width = `${AerialSpace_ImageWidth}px`; // Set the width
+  image.style.height = `${AerialSpace_ImageHeight}px`; // Set the height
 });
 
-// Function to display the next image
-function showNextImage() {
-  images[currentIndex].style.display = 'none';
-  currentIndex = (currentIndex + 1) % images.length;
-  images[currentIndex].style.display = 'block';
+function AerialSpace_ShowNextImage() {
+  AerialSpaceContainerImages[AerialSpace_CurrentIndex].style.display = 'none';
+  AerialSpace_CurrentIndex = (AerialSpace_CurrentIndex + 1) % AerialSpaceContainerImages.length;
+  AerialSpaceContainerImages[AerialSpace_CurrentIndex].style.display = 'block';
 }
 
-// Function to display the previous image
-function showPrevImage() {
-  images[currentIndex].style.display = 'none';
-  currentIndex = (currentIndex - 1 + images.length) % images.length;
-  images[currentIndex].style.display = 'block';
+function AerialSpace_ShowPrevImage() {
+  AerialSpaceContainerImages[AerialSpace_CurrentIndex].style.display = 'none';
+  AerialSpace_CurrentIndex = (AerialSpace_CurrentIndex - 1 + AerialSpaceContainerImages.length) % AerialSpaceContainerImages.length;
+  AerialSpaceContainerImages[AerialSpace_CurrentIndex].style.display = 'block';
 }
+
+// Prison Run Slideshow
+let PrisonRun_CurrentIndex = 0;
+PrisonRunContainerImages.forEach((image, index) => {
+    if (index !== PrisonRun_CurrentIndex) {
+      image.style.display = 'none';
+    }
+    image.style.width = `${PrisonRun_ImageWidth}px`; // Set the width
+    image.style.height = `${PrisonRun_ImageHeight}px`; // Set the height
+  });
+  
+  function PrisonRun_ShowNextImage() {
+    PrisonRunContainerImages[PrisonRun_CurrentIndex].style.display = 'none';
+    PrisonRun_CurrentIndex = (PrisonRun_CurrentIndex + 1) % PrisonRunContainerImages.length;
+    PrisonRunContainerImages[PrisonRun_CurrentIndex].style.display = 'block';
+  }
+  
+  function PrisonRun_ShowPrevImage() {
+    PrisonRunContainerImages[PrisonRun_CurrentIndex].style.display = 'none';
+    PrisonRun_CurrentIndex = (PrisonRun_CurrentIndex - 1 + PrisonRunContainerImages.length) % PrisonRunContainerImages.length;
+    PrisonRunContainerImages[PrisonRun_CurrentIndex].style.display = 'block';
+  }
+
+
+
+setInterval(AerialSpace_ShowNextImage, 3000);
+setInterval(PrisonRun_ShowNextImage, 3000)
 
 // Add event listeners for next and previous buttons if you have them
 // Example:
@@ -137,8 +166,3 @@ function showPrevImage() {
 // const prevButton = document.getElementById('prevButton');
 // nextButton.addEventListener('click', showNextImage);
 // prevButton.addEventListener('click', showPrevImage);
-
-// You can also add a setInterval to automatically change images
-// Example:
-setInterval(showNextImage, 1000); // Change image every 5 seconds
-
