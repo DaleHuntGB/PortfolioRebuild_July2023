@@ -1,449 +1,411 @@
 :root {
-    --clr-PrimaryBG: hsl(0, 0%, 15%);
-    --clr-SecondaryBG: hsl(0, 0%, 20%);
-    --clr-TertiaryBG: hsl(0, 0%, 25%);
+  --clr-PrimaryBG: hsl(0, 0%, 15%);
+  --clr-SecondaryBG: hsl(0, 0%, 20%);
+  --clr-TertiaryBG: hsl(0, 0%, 25%);
 
-    --clr-BtnHover: hsl(200, 100%, 25%);
-    --clr-PrimaryAccent: hsl(200, 100%, 30%);
-    --clr-SecondaryAccent: hsl(200, 100%, 50%);
-    --clr-TertiaryAccent: hsl(200, 100%, 70%);
+  --clr-BtnHover: hsl(200, 100%, 25%);
+  --clr-PrimaryAccent: hsl(200, 100%, 30%);
+  --clr-SecondaryAccent: hsl(200, 100%, 50%);
+  --clr-TertiaryAccent: hsl(200, 100%, 70%);
 
-    --clr-TextColor: hsl(250, 5%, 100%);
-    --clr-ListColor: hsl(250, 5%, 90%);
-    --txt-NavBarBG: url("/Media/Images/07_BG_Texture.png");
-    --txt-BG: url("/Media/Images/02_BG_Texture.png");
-}
-
-*
-{
-    font-family: 'Poppins', sans-serif;
-    padding: 0em;
-    margin: 0em;
-    font-size: 1em;
-}
-
-*::-webkit-scrollbar {
-    display: none;
+  --clr-TextColor: hsl(250, 5%, 100%);
+  --clr-ListColor: hsl(250, 5%, 90%);
+  --txt-NavBarBG: url("/Media/Images/07_BG_Texture.png");
+  --txt-BG: url("/Media/Images/02_BG_Texture.png");
 }
 
 * {
-    -ms-overflow-style: none;
-    scrollbar-width: none;
+  font-family: "Poppins", sans-serif;
+  padding: 0em;
+  margin: 0em;
+  font-size: 1em;
 }
 
-html, body 
-{
-    line-height: 1.5em;
-    scroll-behavior: smooth;
+*::-webkit-scrollbar {
+  display: none;
 }
 
-p 
-{
-    width: 75ch;
-    font-weight: 400;
-    color: var(--clr-TextColor);
+* {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
-ul 
-{
-    text-decoration: none;
-    padding: 0.5em 0em;
-    color: var(--clr-TertiaryAccent);
+html,
+body {
+  line-height: 1.5em;
+  scroll-behavior: smooth;
 }
 
-li 
-{
-    text-decoration: none;
-    list-style-type: none;
-    color: var(--clr-ListColor);
-    padding: 0em 0.5em;
+p {
+  width: 75ch;
+  font-weight: 400;
+  color: var(--clr-TextColor);
 }
 
-a, a:visited, a:focus
-{
-    text-decoration: none;
-    color: var(--clr-TextColor);
+ul {
+  text-decoration: none;
+  padding: 0.5em 0em;
+  color: var(--clr-TertiaryAccent);
 }
 
-.NavigationBarContainer   
-{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    background-color: var(--clr-PrimaryBG);
-    border-bottom: 3px solid var(--clr-PrimaryAccent);
-    height: fit-content;
-    position: fixed;
-    width: 100vw;
-    background-image: var(--txt-NavBarBG);
+li {
+  text-decoration: none;
+  list-style-type: none;
+  color: var(--clr-ListColor);
+  padding: 0em 0.5em;
 }
 
-.NavigationBarContainer_Portfolio
-{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    background-color: var(--clr-PrimaryBG);
-    border-bottom: 3px solid var(--clr-PrimaryAccent);
-    position: fixed;
-    width: 100vw;
-    height: fit-content;
-    background-image: var(--txt-NavBarBG);
+a,
+a:visited,
+a:focus {
+  text-decoration: none;
+  color: var(--clr-TextColor);
 }
 
-.NavigationBar_Logo
-{
-    padding: 0.3em 1em;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.NavigationBarContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--clr-PrimaryBG);
+  border-bottom: 3px solid var(--clr-PrimaryAccent);
+  height: fit-content;
+  position: fixed;
+  width: 100vw;
+  background-image: var(--txt-NavBarBG);
 }
 
-.NavigationBar_MenuItem
-{
-    color: var(--clr-TextColor);
-    transition: color 0.5s ease-in-out;
-    padding: 0em 1em;
+.NavigationBarContainer_Portfolio {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--clr-PrimaryBG);
+  border-bottom: 3px solid var(--clr-PrimaryAccent);
+  position: fixed;
+  width: 100vw;
+  height: fit-content;
+  background-image: var(--txt-NavBarBG);
 }
 
-.NavigationBar_MenuItem:hover
-{
-    color: var(--clr-SecondaryAccent);
-    transition: color 0.5s ease-in-out;
+.NavigationBar_Logo {
+  padding: 0.3em 1em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.SocialBar_AuthorYear
-{
-    color: var(--clr-TextColor);
+.NavigationBar_MenuItem {
+  color: var(--clr-TextColor);
+  transition: color 0.5s ease-in-out;
+  padding: 0em 1em;
 }
 
-.SocialBar_TurnOffBG
-{
-    color: var(--clr-TextColor);
-    transition: color 0.5s ease-in-out;
-    cursor: pointer;
+.NavigationBar_MenuItem:hover {
+  color: var(--clr-SecondaryAccent);
+  transition: color 0.5s ease-in-out;
 }
 
-.SocialBar_TurnOnBG
-{
-    color: var(--clr-TextColor);
-    transition: color 0.5s ease-in-out;
-    cursor: pointer;
+.SocialBar_AuthorYear {
+  color: var(--clr-TextColor);
 }
 
-#Hide
-{
-    display: none;
+.SocialBar_TurnOffBG {
+  color: var(--clr-TextColor);
+  transition: color 0.5s ease-in-out;
+  cursor: pointer;
 }
 
-#Show
-{
-    display: flex;
+.SocialBar_TurnOnBG {
+  color: var(--clr-TextColor);
+  transition: color 0.5s ease-in-out;
+  cursor: pointer;
 }
 
-.SocialBar_TurnOffBG:hover
-{
-    color: var(--clr-SecondaryAccent);
-    transition: color 0.5s ease-in-out; 
+#Hide {
+  display: none;
 }
 
-.SocialBar_TurnOnBG:hover
-{
-    color: var(--clr-SecondaryAccent);
-    transition: color 0.5s ease-in-out; 
+#Show {
+  display: flex;
 }
 
-.HomeContainer
-{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: var(--clr-SecondaryBG);
-    background-image: var(--txt-BG);
+.SocialBar_TurnOffBG:hover {
+  color: var(--clr-SecondaryAccent);
+  transition: color 0.5s ease-in-out;
 }
 
-.Home_Content
-{
-    padding: 1em 0em;
-    font-size: 2em;
-    font-weight: 600;
-    color: var(--clr-TextColor)
+.SocialBar_TurnOnBG:hover {
+  color: var(--clr-SecondaryAccent);
+  transition: color 0.5s ease-in-out;
 }
 
-.AboutMeContainer
-{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: var(--clr-SecondaryBG);
-    background-image: var(--txt-BG);
+.HomeContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: var(--clr-SecondaryBG);
+  background-image: var(--txt-BG);
 }
 
-.AboutMe_Content
-{
-    text-align: center;
+.Home_Content {
+  padding: 1em 0em;
+  font-size: 2em;
+  font-weight: 600;
+  color: var(--clr-TextColor);
 }
 
-.AboutMe_Content > p 
-{
-    padding: 0.5em 0em;
+.AboutMeContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: var(--clr-SecondaryBG);
+  background-image: var(--txt-BG);
 }
 
-.SocialBarContainer  
-{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    background-color: var(--clr-PrimaryBG);
-    border-top: 3px solid var(--clr-PrimaryAccent);
-    height: 3vh;
-    position: fixed;
-    bottom: 0;
-    width: 100vw;
-    background-image: var(--txt-NavBarBG);
+.AboutMe_Content {
+  text-align: center;
 }
 
-.SocialBar_AuthorYear
-{
-    padding: 0em 1em;
-}
-.SocialBar_Socials_Link
-{
-    color: var(--clr-TextColor);
-    transition: color 0.5s ease-in-out;
-    padding: 0em 1em;
+.AboutMe_Content > p {
+  padding: 0.5em 0em;
 }
 
-.SocialBar_Socials_Link:hover
-{
-    color: var(--clr-SecondaryAccent);
-    transition: color 0.5s ease-in-out;
+.SocialBarContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--clr-PrimaryBG);
+  border-top: 3px solid var(--clr-PrimaryAccent);
+  height: 3vh;
+  position: fixed;
+  bottom: 0;
+  width: 100vw;
+  background-image: var(--txt-NavBarBG);
 }
 
-.PortfolioContainer
-{
-    display: flex;
-    flex-direction: column;
-    justify-content: top;
-    align-items: center;
-    height: 100vh;
-    padding: 5em 0em;
-    background-color: var(--clr-SecondaryBG);
-    background-image: var(--txt-BG);
+.SocialBar_AuthorYear {
+  padding: 0em 1em;
+}
+.SocialBar_Socials_Link {
+  color: var(--clr-TextColor);
+  transition: color 0.5s ease-in-out;
+  padding: 0em 1em;
 }
 
-.PersonalProjects_PortfolioContainer
-{
-    display: flex;
-    flex-direction: column;
-    justify-content: top;
-    align-items: center;
-    padding: 5em 0em;
-    background-color: var(--clr-SecondaryBG);
-    background-image: var(--txt-BG);
-    background-attachment: fixed;
+.SocialBar_Socials_Link:hover {
+  color: var(--clr-SecondaryAccent);
+  transition: color 0.5s ease-in-out;
 }
 
-.PortfolioContainer > div, .PersonalProjects_PortfolioContainer > div
-{
-    margin-top: 1em;
+.PortfolioContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: top;
+  align-items: center;
+  height: 100vh;
+  padding: 5em 0em;
+  background-color: var(--clr-SecondaryBG);
+  background-image: var(--txt-BG);
 }
 
-.PortfolioContainer > div > p, .PersonalProjects_PortfolioContainer > div > p
-{
-    width: 90vw;
+.PersonalProjects_PortfolioContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: top;
+  align-items: center;
+  padding: 5em 0em;
+  background-color: var(--clr-SecondaryBG);
+  background-image: var(--txt-BG);
+  background-attachment: fixed;
 }
 
-.MinimapStats_AddOnDev, .WeakAuras_Dev, .University_Assignments, .UI_Dev
-{
-    background-color: var(--clr-TertiaryBG);
-    border: 1px solid var(--clr-PrimaryAccent);
-    padding: 1em;
-    width: 90vw;
+.PortfolioContainer > div,
+.PersonalProjects_PortfolioContainer > div {
+  margin-top: 1em;
 }
 
-.MinimapStats_AddOnDev_Heading, .WeakAuras_Dev_Heading, .University_Assignments_Heading, .UI_Dev_Heading
-{
-    color: var(--clr-TextColor);
-    font-weight: 600;
-    text-align: center;
-    background-color: var(--clr-SecondaryBG);
-    padding: 0.5em 0em;
-    margin: 0em 0em 1em 0em;
-    border-radius: 3px;
+.PortfolioContainer > div > p,
+.PersonalProjects_PortfolioContainer > div > p {
+  width: 90vw;
 }
 
-.Portfolio_CenterText
-{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 1em 0em 0em 0em;
+.MinimapStats_AddOnDev,
+.WeakAuras_Dev,
+.University_Assignments,
+.UI_Dev {
+  background-color: var(--clr-TertiaryBG);
+  border: 1px solid var(--clr-PrimaryAccent);
+  padding: 1em;
+  width: 90vw;
 }
 
-.MinimapStats_AddOnDev_CurseForgeLink
-{
-    text-align: center;
-    color: var(--clr-TextColor);
-    transition: color 0.5s ease-in-out;
-    font-weight: 600;
+.MinimapStats_AddOnDev_Heading,
+.WeakAuras_Dev_Heading,
+.University_Assignments_Heading,
+.UI_Dev_Heading {
+  color: var(--clr-TextColor);
+  font-weight: 600;
+  text-align: center;
+  background-color: var(--clr-SecondaryBG);
+  padding: 0.5em 0em;
+  margin: 0em 0em 1em 0em;
+  border-radius: 3px;
 }
 
-.MinimapStats_AddOnDev_CurseForgeLink:hover
-{
-    color: var(--clr-SecondaryAccent);
-    transition: color 0.5s ease-in-out;
+.Portfolio_CenterText {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 1em 0em 0em 0em;
 }
 
-.PersonalProjects
-{
-    color: var(--clr-TextColor);
-    font-weight: 600;
-    text-align: center;
-    background-color: var(--clr-PrimaryBG);
-    transition: background-color 0.5s ease-in-out;
-    padding: 1em;
-    margin: 1em;
-    border: 1px solid var(--clr-PrimaryAccent);
+.MinimapStats_AddOnDev_CurseForgeLink {
+  text-align: center;
+  color: var(--clr-TextColor);
+  transition: color 0.5s ease-in-out;
+  font-weight: 600;
 }
 
-.PersonalProjects:hover
-{
-    background-color: var(--clr-TertiaryBG);
-    transition: background-color 0.5s ease-in-out;
-    cursor: pointer;
+.MinimapStats_AddOnDev_CurseForgeLink:hover {
+  color: var(--clr-SecondaryAccent);
+  transition: color 0.5s ease-in-out;
 }
 
-.WeakAuras_Heading
-{
-    font-size: 1.15em;
-    font-weight: 600;
-    color: var(--clr-SecondaryAccent);
+.PersonalProjects {
+  color: var(--clr-TextColor);
+  font-weight: 600;
+  text-align: center;
+  background-color: var(--clr-PrimaryBG);
+  transition: background-color 0.5s ease-in-out;
+  padding: 1em;
+  margin: 1em;
+  border: 1px solid var(--clr-PrimaryAccent);
 }
 
-.WeakAuras_Dev > ul > li > a
-{
-    text-align: center;
-    color: var(--clr-TextColor);
-    transition: color 0.5s ease-in-out;
-    font-weight: 600;
+.PersonalProjects:hover {
+  background-color: var(--clr-TertiaryBG);
+  transition: background-color 0.5s ease-in-out;
+  cursor: pointer;
 }
 
-.WeakAuras_Dev > ul > li > a:hover
-{
-    color: var(--clr-SecondaryAccent);
-    transition: color 0.5s ease-in-out;
+.WeakAuras_Heading {
+  font-size: 1.15em;
+  font-weight: 600;
+  color: var(--clr-SecondaryAccent);
 }
 
-.WeakAuras_Dev_Desc
-{
-    font-size: 0.9em;
-    font-weight: 300;
+.WeakAuras_Dev > ul > li > a {
+  text-align: center;
+  color: var(--clr-TextColor);
+  transition: color 0.5s ease-in-out;
+  font-weight: 600;
 }
 
-.University_Assignments_Year_One
-{
-    color: var(--clr-TextColor);
-    font-weight: 600;
-    text-align: center;
-    background-color: var(--clr-SecondaryBG);
-    padding: 0.5em 0em;
-    margin: 1em 0em 1em 0em;
-    border-radius: 3px;
+.WeakAuras_Dev > ul > li > a:hover {
+  color: var(--clr-SecondaryAccent);
+  transition: color 0.5s ease-in-out;
 }
 
-.University_Assignments_Year_Two
-{
-    color: var(--clr-TextColor);
-    font-weight: 600;
-    text-align: center;
-    background-color: var(--clr-SecondaryBG);
-    padding: 0.5em 0em;
-    margin: 1em 0em 1em 0em;
-    border-radius: 3px;
+.WeakAuras_Dev_Desc {
+  font-size: 0.9em;
+  font-weight: 300;
+}
+
+.University_Assignments_Year_One {
+  color: var(--clr-TextColor);
+  font-weight: 600;
+  text-align: center;
+  background-color: var(--clr-SecondaryBG);
+  padding: 0.5em 0em;
+  margin: 1em 0em 1em 0em;
+  border-radius: 3px;
+}
+
+.University_Assignments_Year_Two {
+  color: var(--clr-TextColor);
+  font-weight: 600;
+  text-align: center;
+  background-color: var(--clr-SecondaryBG);
+  padding: 0.5em 0em;
+  margin: 1em 0em 1em 0em;
+  border-radius: 3px;
 }
 
 .University_Assignments_Year_One_AerialSpace,
 .University_Assignments_Year_One_Prison_Run,
 .University_Assignments_Year_Two_Elite_Parkour,
-.University_Assignments_Year_Two_Game_Engine_Development
-{
-    font-weight: 600;
-    color: var(--clr-TertiaryAccent);
+.University_Assignments_Year_Two_Game_Engine_Development {
+  font-weight: 600;
+  color: var(--clr-TertiaryAccent);
 }
 
-.University_Assignments_Year_One_AerialSpace_Link
-{
-    text-align: center;
-    color: var(--clr-TextColor);
-    transition: color 0.5s ease-in-out;
-    font-weight: 600;
+.University_Assignments_Year_One_AerialSpace_Link {
+  text-align: center;
+  color: var(--clr-TextColor);
+  transition: color 0.5s ease-in-out;
+  font-weight: 600;
 }
 
-.University_Assignments_Year_One_AerialSpace_Link:hover
-{
-    color: var(--clr-SecondaryAccent);
-    transition: color 0.5s ease-in-out;
+.University_Assignments_Year_One_AerialSpace_Link:hover {
+  color: var(--clr-SecondaryAccent);
+  transition: color 0.5s ease-in-out;
 }
 
-.University_Assignments_Year_One_AerialSpace_Container, .University_Assignments_Year_One_Prison_Run_Container
-
-{
-    display: flex;
-    justify-content: center;
-    align-items: left;
-    flex-direction: column;
+.University_Assignments_Year_One_AerialSpace_Container,
+.University_Assignments_Year_One_Prison_Run_Container {
+  display: flex;
+  justify-content: center;
+  align-items: left;
+  flex-direction: column;
 }
 
-.University_Assignments_Year_Two_Elite_Parkour_Container, .University_Assignments_Year_Two_Game_Engine_Development_Container
-{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
+.University_Assignments_Year_Two_Elite_Parkour_Container,
+.University_Assignments_Year_Two_Game_Engine_Development_Container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
 }
 
-
-.University_Assignments_Year_One_AerialSpace_Container > p, .University_Assignments_Year_One_Prison_Run_Container > p,
-.University_Assignments_Year_Two_Game_Engine_Development_Container > p
-{
-    width: fit-content;
-    padding: 0.5em;
+.University_Assignments_Year_One_AerialSpace_Container > p,
+.University_Assignments_Year_One_Prison_Run_Container > p,
+.University_Assignments_Year_Two_Game_Engine_Development_Container > p {
+  width: fit-content;
+  padding: 0.5em;
 }
 
-.University_Assignments_Year_One_AerialSpace_Slideshow, .University_Assignments_Year_One_Prison_Run_Slideshow
-{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
+.University_Assignments_Year_One_AerialSpace_Slideshow,
+.University_Assignments_Year_One_Prison_Run_Slideshow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
 }
 
-.University_Assignments_Year_Two_Elite_Parkour_GameDemo, .University_Assignments_Year_Two_Game_Engine_Development_Demo
-{
-    border: 1px solid var(--clr-TertiaryAccent);
-    background-color: black;
-    margin: 0.5em;
+.University_Assignments_Year_Two_Elite_Parkour_GameDemo,
+.University_Assignments_Year_Two_Game_Engine_Development_Demo {
+  border: 1px solid var(--clr-TertiaryAccent);
+  background-color: black;
+  margin: 0.5em;
 }
 
-.University_Assignments_Year_One_AerialSpace_Slideshow > img, .University_Assignments_Year_One_Prison_Run_Slideshow > img
-{
-    width: inherit;
-    border: 1px solid var(--clr-TertiaryAccent);
-    margin: 0.5em;
+.University_Assignments_Year_One_AerialSpace_Slideshow > img,
+.University_Assignments_Year_One_Prison_Run_Slideshow > img {
+  width: inherit;
+  border: 1px solid var(--clr-TertiaryAccent);
+  margin: 0.5em;
 }
 
 @media screen and (max-width: 1500px) {
-    .University_Assignments_Year_One_AerialSpace_Slideshow, .University_Assignments_Year_One_Prison_Run_Slideshow
-    {
-        flex-wrap: wrap;
-        margin: auto;
-    }
+  .University_Assignments_Year_One_AerialSpace_Slideshow,
+  .University_Assignments_Year_One_Prison_Run_Slideshow {
+    flex-wrap: wrap;
+    margin: auto;
+  }
 }
